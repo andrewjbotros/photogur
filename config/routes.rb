@@ -1,5 +1,6 @@
 Photogur::Application.routes.draw do
-
+  resources :pictures
+  root :to => "pictures#index"
   get 'pictures' => 'pictures#index'
 
   post 'pictures' => "pictures#create" # this is a new line of code
